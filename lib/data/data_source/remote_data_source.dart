@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:platform_device_id/platform_device_id.dart';
-import 'package:SkyWatch/application/app_prefs.dart';
+import 'package:sky_watch/application/app_prefs.dart';
 import '../network/app_api.dart';
 import '../requests/requests.dart';
 import '../responses/responses.dart';

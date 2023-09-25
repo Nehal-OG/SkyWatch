@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
-import 'package:SkyWatch/application/app_prefs.dart';
-import 'package:SkyWatch/application/functions.dart';
-import 'package:SkyWatch/presentation/pages/settings/settings_view.dart';
-import 'package:SkyWatch/presentation/resources/constants_manager.dart';
+import 'package:sky_watch/application/app_prefs.dart';
+import 'package:sky_watch/application/functions.dart';
+import 'package:sky_watch/presentation/pages/settings/settings_view.dart';
+import 'package:sky_watch/presentation/resources/constants_manager.dart';
 
 class SettingsViewModel extends GetxController {
   final AppPreferences _appPreferences = Get.find<AppPreferences>();
@@ -24,10 +24,10 @@ class SettingsViewModel extends GetxController {
   }
 
   initialize() {
-    selectedDateFormat.value =
-        (_appPreferences.getDateFormat() == AppConstants.dateMonthYearString)
-            ? DateFormatEnum.ddmmyyyy
-            : DateFormatEnum.mmddyyyy;
+    // selectedDateFormat.value =
+    //     (_appPreferences.getDateFormat() == AppConstants.dateMonthYearString)
+    //         ? DateFormatEnum.ddmmyyyy
+    //         : DateFormatEnum.mmddyyyy;
   }
 
   Future<void> saveSettings(BuildContext context) async {
@@ -35,12 +35,12 @@ class SettingsViewModel extends GetxController {
 
     try {
       await _appPreferences.setDateFormat(
-          (selectedDateFormat.value == DateFormatEnum.ddmmyyyy)
-              ? AppConstants.dateMonthYearString
-              : AppConstants.monthDateYearString);
+          // (selectedDateFormat.value == DateFormatEnum.ddmmyyyy)
+          //     ? AppConstants.dateMonthYearString
+          //     : AppConstants.monthDateYearString);
 
-      showSuccessDialog(context,
-          successMessageText: 'Settings saved successfully!');
+          showSuccessDialog(context,
+              successMessageText: 'Settings saved successfully!'));
     } catch (e) {
       print(e.toString());
     }

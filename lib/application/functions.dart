@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:SkyWatch/application/extensions.dart';
-import 'package:SkyWatch/presentation/resources/strings_manager.dart';
-import 'package:SkyWatch/presentation/widgets/custom_dialog.dart';
-
-import '../presentation/resources/constants_manager.dart';
-import '../presentation/resources/date_format_manager.dart';
-import 'app_prefs.dart';
+import 'package:sky_watch/application/extensions.dart';
+import 'package:sky_watch/presentation/resources/strings_manager.dart';
+import 'package:sky_watch/presentation/widgets/custom_dialog.dart';
 
 isEmailValid(String email) {
   return RegExp(
@@ -111,13 +107,6 @@ Future<int?> showDropdownDialog(
       );
     },
   );
-}
-
-String getDateString(AppPreferences appPreferences,
-    {required DateTime dateTime}) {
-  return (appPreferences.getDateFormat() == AppConstants.dateMonthYearString)
-      ? AppDateFormats.dateMonthYear.format(dateTime)
-      : AppDateFormats.monthDateYear.format(dateTime);
 }
 
 /// KEYBOARD

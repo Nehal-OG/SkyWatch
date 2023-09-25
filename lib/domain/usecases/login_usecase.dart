@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:SkyWatch/data/failures/failure.dart';
-import 'package:SkyWatch/data/requests/requests.dart';
-import 'package:SkyWatch/domain/models/models.dart';
-import 'package:SkyWatch/domain/repository/repository.dart';
+import 'package:sky_watch/data/failures/failure.dart';
+import 'package:sky_watch/data/requests/requests.dart';
+import 'package:sky_watch/domain/models/models.dart';
+import 'package:sky_watch/domain/repository/repository.dart';
 
 import 'base_usecase.dart';
 

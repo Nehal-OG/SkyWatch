@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:SkyWatch/presentation/pages/settings/settings_view_model.dart';
-import 'package:SkyWatch/presentation/resources/color_manager.dart';
-import 'package:SkyWatch/presentation/resources/constants_manager.dart';
-import 'package:SkyWatch/presentation/resources/styles_manager.dart';
-import 'package:SkyWatch/presentation/widgets/custom_navigation_bar.dart';
+import 'package:sky_watch/presentation/pages/settings/settings_view_model.dart';
+import 'package:sky_watch/presentation/resources/color_manager.dart';
+import 'package:sky_watch/presentation/resources/constants_manager.dart';
+import 'package:sky_watch/presentation/resources/styles_manager.dart';
+import 'package:sky_watch/presentation/widgets/custom_navigation_bar.dart';
 import '../../../presentation/resources/strings_manager.dart';
 import '../../../presentation/widgets/custom_scaffold.dart';
 import '../../../presentation/widgets/custom_text.dart';
@@ -55,7 +55,7 @@ class SettingsView extends StatelessWidget {
                         const SizedBox(
                           width: 4.0,
                         ),
-                        CustomText(AppConstants.dateMonthYearString),
+                        // CustomText(AppConstants.dateMonthYearString),
                       ],
                     ),
                   ),
@@ -78,7 +78,7 @@ class SettingsView extends StatelessWidget {
                         const SizedBox(
                           width: 4.0,
                         ),
-                        CustomText(AppConstants.monthDateYearString),
+                        // CustomText(AppConstants.monthDateYearString),
                       ],
                     ),
                   ),

@@ -3,9 +3,8 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
-import 'package:SkyWatch/application/di.dart';
-import 'package:SkyWatch/presentation/pages/dashboard/dashboard_view_model.dart';
-import 'package:SkyWatch/presentation/resources/api_manager.dart';
+import 'package:sky_watch/application/di.dart';
+import 'package:sky_watch/presentation/resources/api_manager.dart';
 import 'failure.dart';
 
 import '../../application/app_constants.dart';
@@ -46,7 +45,6 @@ Failure _handleError(DioError error) {
               Constant.empty;
 
           if (message.contains(APIErrors.tokenInvalid)) {
-            _logout();
             message = APIErrors.tokenExpired;
           }
         } catch (e) {
@@ -67,12 +65,6 @@ Failure _handleError(DioError error) {
     case DioErrorType.unknown:
       return DataSource.DEFAULT.getFailure();
   }
-}
-
-_logout() async {
-  initDashboardModule();
-  var dashboardViewModel = Get.find<DashboardViewModel>();
-  dashboardViewModel.logout();
 }
 
 enum DataSource {

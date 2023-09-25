@@ -29,7 +29,7 @@ class AppStrings {
   static const String username = "Username";
   static const String password = "Password";
   static const String envPye = "Env: PYe";
-  static const String SkyWatchApp = "SkyWatch App";
+  static const String sky_watchApp = "sky_watch App";
   static const String appVersionText = "Version";
 
   // LOGOUT

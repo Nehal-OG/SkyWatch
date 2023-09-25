@@ -1,6 +1,6 @@
-import 'package:SkyWatch/application/extensions.dart';
-import 'package:SkyWatch/data/responses/responses.dart';
-import 'package:SkyWatch/domain/models/models.dart';
+import 'package:sky_watch/application/extensions.dart';
+import 'package:sky_watch/data/responses/responses.dart';
+import 'package:sky_watch/domain/models/models.dart';
 
 extension UserInfoResponseMapper on UserInfoResponse {
   //convert APIs response to model for domain layer

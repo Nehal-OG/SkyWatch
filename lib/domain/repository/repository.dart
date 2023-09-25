@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:SkyWatch/data/failures/failure.dart';
-import 'package:SkyWatch/domain/models/models.dart';
+import 'package:sky_watch/data/failures/failure.dart';
+import 'package:sky_watch/domain/models/models.dart';
 import '../../data/requests/requests.dart';
 
 abstract class Repository {

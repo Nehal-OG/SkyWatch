@@ -1,8 +1,8 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:SkyWatch/presentation/resources/values_manager.dart';
-import 'package:SkyWatch/presentation/widgets/custom_button.dart';
+import 'package:sky_watch/presentation/resources/values_manager.dart';
+import 'package:sky_watch/presentation/widgets/custom_button.dart';
 
 Widget CustomNavigationBar({
   required String buttonOneText,

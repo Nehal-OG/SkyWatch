@@ -2,10 +2,10 @@
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:SkyWatch/presentation/resources/color_manager.dart';
-import 'package:SkyWatch/presentation/resources/styles_manager.dart';
-import 'package:SkyWatch/presentation/resources/values_manager.dart';
-import 'package:SkyWatch/presentation/widgets/custom_divider.dart';
+import 'package:sky_watch/presentation/resources/color_manager.dart';
+import 'package:sky_watch/presentation/resources/styles_manager.dart';
+import 'package:sky_watch/presentation/resources/values_manager.dart';
+import 'package:sky_watch/presentation/widgets/custom_divider.dart';
 
 Widget CustomListView({
   required Widget Function(int) listItemWidget,

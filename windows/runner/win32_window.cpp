@@ -282,7 +282,7 @@ void Win32Window::UpdateTheme(HWND const window) {
 
   if (result == ERROR_SUCCESS) {
     BOOL enable_dark_mode = light_mode == 0;
-    DSkyWatchetWindowAttribute(window, DWMWA_USE_IMMERSIVE_DARK_MODE,
+    Dsky_watchetWindowAttribute(window, DWMWA_USE_IMMERSIVE_DARK_MODE,
                           &enable_dark_mode, sizeof(enable_dark_mode));
   }
 }

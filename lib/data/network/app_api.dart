@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
-import 'package:SkyWatch/presentation/resources/api_manager.dart';
+import 'package:sky_watch/presentation/resources/api_manager.dart';
 
 import '../responses/responses.dart';
 

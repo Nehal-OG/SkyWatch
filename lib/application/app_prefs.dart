@@ -1,6 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:SkyWatch/application/app_constants.dart';
-import 'package:SkyWatch/presentation/resources/constants_manager.dart';
+import 'package:sky_watch/application/app_constants.dart';
+import 'package:sky_watch/presentation/resources/constants_manager.dart';
 
 //const String PREFS_KEY_LOGGED_IN = "PREFS_KEY_LOGGED_IN";
 const String PREFS_KEY_TOKEN = "PREFS_KEY_TOKEN";
@@ -21,10 +21,5 @@ class AppPreferences {
 
   Future<void> setDateFormat(String dateFormat) async {
     await _sharedPreferences.setString(PREFS_KEY_DATE_FORMAT, dateFormat);
-  }
-
-  String getDateFormat() {
-    return _sharedPreferences.getString(PREFS_KEY_DATE_FORMAT) ??
-        AppConstants.dateMonthYearString;
   }
 }

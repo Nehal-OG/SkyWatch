@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:SkyWatch/presentation/resources/api_manager.dart';
+import 'package:sky_watch/presentation/resources/api_manager.dart';
 import '../../application/app_constants.dart';
 import '../../application/app_prefs.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';

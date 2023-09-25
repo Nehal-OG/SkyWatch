@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:SkyWatch/presentation/widgets/custom_app_bar.dart';
+import 'package:sky_watch/presentation/widgets/custom_app_bar.dart';
 
 Widget CustomScaffold(
   BuildContext context, {

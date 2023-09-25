@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:SkyWatch/presentation/resources/color_manager.dart';
-import 'package:SkyWatch/presentation/resources/styles_manager.dart';
-import 'package:SkyWatch/presentation/resources/values_manager.dart';
-import 'package:SkyWatch/presentation/widgets/custom_button.dart';
-import 'package:SkyWatch/presentation/widgets/custom_text.dart';
+import 'package:sky_watch/presentation/resources/color_manager.dart';
+import 'package:sky_watch/presentation/resources/styles_manager.dart';
+import 'package:sky_watch/presentation/resources/values_manager.dart';
+import 'package:sky_watch/presentation/widgets/custom_button.dart';
+import 'package:sky_watch/presentation/widgets/custom_text.dart';
 import 'custom_divider.dart';
 
 Dialog CustomConfirmationDialog({

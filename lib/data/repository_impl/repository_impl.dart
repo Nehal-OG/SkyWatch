@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:SkyWatch/application/extensions.dart';
-import 'package:SkyWatch/data/failures/failure.dart';
-import 'package:SkyWatch/presentation/resources/strings_manager.dart';
+import 'package:sky_watch/application/extensions.dart';
+import 'package:sky_watch/data/failures/failure.dart';
+import 'package:sky_watch/presentation/resources/strings_manager.dart';
 import '../data_source/remote_data_source.dart';
 import '../failures/error_handler.dart';
 import '../mappers/mapper.dart';

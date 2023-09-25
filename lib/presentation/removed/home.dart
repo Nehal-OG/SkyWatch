@@ -1,28 +1,27 @@
+import 'package:sky_watch/presentation/resources/strings_manager.dart';
+import 'package:sky_watch/presentation/widgets/custom_scaffold.dart';
+import 'package:sky_watch/presentation/widgets/custom_text.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:SkyWatch/presentation/pages/current_weather/current_weather_view_model.dart';
-import 'package:SkyWatch/presentation/resources/assets_manager.dart';
-import 'package:SkyWatch/presentation/resources/color_manager.dart';
-import 'package:SkyWatch/presentation/resources/constants_manager.dart';
-import 'package:SkyWatch/presentation/resources/font_manager.dart';
-import 'package:SkyWatch/presentation/resources/route_manager.dart';
-import 'package:SkyWatch/presentation/resources/styles_manager.dart';
-import 'package:SkyWatch/presentation/resources/values_manager.dart';
-import 'package:SkyWatch/presentation/widgets/custom_button.dart';
-import 'package:SkyWatch/presentation/widgets/custom_text_field.dart';
-
-import '../../resources/strings_manager.dart';
-import '../../widgets/custom_scaffold.dart';
-import '../../widgets/custom_text.dart';
+import 'package:sky_watch/presentation/pages/home_screen/home_screen_view_model.dart';
+import 'package:sky_watch/presentation/resources/assets_manager.dart';
+import 'package:sky_watch/presentation/resources/color_manager.dart';
+import 'package:sky_watch/presentation/resources/constants_manager.dart';
+import 'package:sky_watch/presentation/resources/font_manager.dart';
+import 'package:sky_watch/presentation/resources/route_manager.dart';
+import 'package:sky_watch/presentation/resources/styles_manager.dart';
+import 'package:sky_watch/presentation/resources/values_manager.dart';
+import 'package:sky_watch/presentation/widgets/custom_button.dart';
+import 'package:sky_watch/presentation/widgets/custom_text_field.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final loginViewModel = Get.find<LoginViewModel>();
+    final loginViewModel = Get.find<HomeScreenViewModel>();
 
     return CustomScaffold(context,
         scaffoldPadding: AppPaddings.p30,
@@ -69,14 +68,14 @@ class LoginView extends StatelessWidget {
                   () => CustomTextField(
                     controller: loginViewModel.passwordController,
                     hintText: AppStrings.password,
-                    suffixIconAssetPath: loginViewModel.showPassword.value
-                        ? ImageAssets.visibility
-                        : ImageAssets.visibilityOff,
+                    // suffixIconAssetPath: loginViewModel.showPassword.value,
+                    // ? ImageAssets.visibility
+                    // : ImageAssets.visibilityOff,
                     obscureText: !loginViewModel.showPassword.value,
                     onSuffixIconPressed: () => loginViewModel.showPassword
                         .value = !loginViewModel.showPassword.value,
                     isLastTextField: true,
-                    onSubmitted: (value) => loginViewModel.login(),
+                    // onSubmitted: (value) => loginViewModel.login(),
                   ),
                 ),
                 Obx(() {
@@ -108,7 +107,8 @@ class LoginView extends StatelessWidget {
                 ),
                 CustomButton(
                   AppStrings.next,
-                  onPressed: () => loginViewModel.login(),
+                  // onPressed: () => loginViewModel.login(),
+                  onPressed: (() {}),
                   greyBackground: false,
                 ),
               ],
@@ -130,7 +130,7 @@ class LoginView extends StatelessWidget {
                   style: getGraphikTextStyle(fontSize: FontSizeManager.s11),
                   children: <TextSpan>[
                     const TextSpan(
-                      text: AppStrings.SkyWatchApp,
+                      text: AppStrings.sky_watchApp,
                     ),
                     TextSpan(
                         text:

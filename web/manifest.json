@@ -1,6 +1,6 @@
 {
-    "name": "SkyWatch",
-    "short_name": "SkyWatch",
+    "name": "sky_watch",
+    "short_name": "sky_watch",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

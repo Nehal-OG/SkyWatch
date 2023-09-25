@@ -3,18 +3,17 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:SkyWatch/data/data_source/remote_data_source.dart';
-import 'package:SkyWatch/data/network/app_api.dart';
-import 'package:SkyWatch/data/network/dio_factory.dart';
-import 'package:SkyWatch/data/repository_impl/repository_impl.dart';
-import 'package:SkyWatch/domain/repository/repository.dart';
-import 'package:SkyWatch/domain/usecases/logout_usecase.dart';
-import 'package:SkyWatch/presentation/pages/dashboard/dashboard_view_model.dart';
-import 'package:SkyWatch/presentation/pages/current_weather/current_weather_view_model.dart';
-import 'package:SkyWatch/presentation/pages/settings/settings_view_model.dart';
-import 'package:SkyWatch/presentation/pages/splash/splash_view_model.dart';
-import 'package:SkyWatch/presentation/resources/color_manager.dart';
-import 'package:SkyWatch/presentation/resources/values_manager.dart';
+import 'package:sky_watch/data/data_source/remote_data_source.dart';
+import 'package:sky_watch/data/network/app_api.dart';
+import 'package:sky_watch/data/network/dio_factory.dart';
+import 'package:sky_watch/data/repository_impl/repository_impl.dart';
+import 'package:sky_watch/domain/repository/repository.dart';
+import 'package:sky_watch/domain/usecases/logout_usecase.dart';
+import 'package:sky_watch/presentation/pages/home_screen/home_screen_view_model.dart';
+import 'package:sky_watch/presentation/pages/settings/settings_view_model.dart';
+import 'package:sky_watch/presentation/pages/splash/splash_view_model.dart';
+import 'package:sky_watch/presentation/resources/color_manager.dart';
+import 'package:sky_watch/presentation/resources/values_manager.dart';
 import '../data/network/network_info.dart';
 import '../domain/usecases/login_usecase.dart';
 import 'app_prefs.dart';
@@ -86,18 +85,8 @@ initLoginModule() {
     Get.lazyPut<LoginUseCase>(() => LoginUseCase(Get.find<Repository>()));
 
     // Login View Model
-    Get.lazyPut<LoginViewModel>(() => LoginViewModel(Get.find<LoginUseCase>()));
-  }
-}
-
-initDashboardModule() {
-  if (!Get.isRegistered<LogoutUseCase>()) {
-    // Logout UseCase
-    Get.lazyPut<LogoutUseCase>(() => LogoutUseCase(Get.find<Repository>()));
-
-    // Login View Model
-    Get.lazyPut<DashboardViewModel>(
-        () => DashboardViewModel(Get.find<LogoutUseCase>()));
+    Get.lazyPut<HomeScreenViewModel>(
+        () => HomeScreenViewModel(Get.find<LoginUseCase>()));
   }
 }
 
@@ -108,25 +97,3 @@ initSettingsModule() {
     Get.lazyPut<SettingsViewModel>(() => SettingsViewModel());
   }
 }
-
-
-// WO PUT AWAY
-// initWOPutAwayModule() {
-//   if (!Get.isRegistered<WOPutAwayRequestInquiryViewModel>()) {
-//     Get.lazyPut<WOPutawayOrderUseCase>(
-//         () => WOPutawayOrderUseCase(Get.find<Repository>()));
-
-//     Get.lazyPut<WOPutawayProcessUseCase>(
-//         () => WOPutawayProcessUseCase(Get.find<Repository>()));
-
-//     Get.lazyPut<WOPutawayCancelUseCase>(
-//         () => WOPutawayCancelUseCase(Get.find<Repository>()));
-
-//     Get.lazyPut<WOPutAwayRequestInquiryViewModel>(
-//         () => WOPutAwayRequestInquiryViewModel(
-//               Get.find<WOPutawayOrderUseCase>(),
-//               Get.find<WOPutawayProcessUseCase>(),
-//               Get.find<WOPutawayCancelUseCase>(),
-//             ));
-//   }
-// }
